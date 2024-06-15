@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="contact-form">
+      <h1>Contact Us</h1>
+      <!-- name -->
+      <div class="name">
+        <!-- first name -->
+        <div class="controller">
+          <label for="firstName">first Name <sup>*</sup></label>
+          <input type="text" id="firstName" name="firstName" />
+        </div>
+        <!-- last name -->
+        <div class="controller">
+          <label for="lastName">last Name <sup>*</sup></label>
+          <input type="text" id="lastName" name="lastName" />
+        </div>
+      </div>
+      <!-- email -->
+      <div class="controller">
+        <label for="email">Email Address <sup>*</sup></label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <!-- query type -->
+      <div class="query-container">
+        <label for="">Query Type <sup>*</sup></label>
+
+        <div class="query">
+          <div class="controller-check">
+            <label class="radio-container">
+              Query Type
+              <input type="radio" name="query" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="controller-check">
+            <label class="radio-container">
+              Support Request
+              <input type="radio" name="query" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- message -->
+      <div class="controller">
+        <label for="message">Message <sup>*</sup></label>
+        <textarea id="message" name="message" rows="10"></textarea>
+      </div>
+      <!-- accept terms -->
+      <label class="terms">
+        I consent to being contacted by the team
+        <input type="checkbox" name="terms-check" class="terms-check" />
+        <span class="terms-checkmark"></span>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a
+        href="https://github.com/coder-abdo"
+        target="_blank"
+        rel="noopener noreferrer"
+        >AbdulMonaem Shahat</a
+      >.
+    </div>
+  </body>
+</html>

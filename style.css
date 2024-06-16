@@ -77,6 +77,15 @@ textarea {
   font-size: 1.6rem;
   font-family: var(--karla-font);
 }
+input:focus,
+input:hover,
+textarea:hover,
+textarea:focus {
+  outline: none;
+  border-color: var(--med-green);
+  cursor: pointer;
+}
+
 .query-container {
   display: flex;
   flex-direction: column;
@@ -88,6 +97,7 @@ textarea {
   justify-content: space-between;
   gap: 2rem;
 }
+
 .controller-check {
   flex: 1;
   border: 0.1rem solid var(--med-grey);
@@ -97,6 +107,15 @@ textarea {
   font-family: var(--karla-font);
   display: flex;
   align-items: center;
+}
+.controller-check:hover {
+  cursor: pointer;
+}
+.controller-check:focus-within {
+  cursor: pointer;
+  outline: none;
+  border-color: var(--med-green);
+  background-color: var(--light-green);
 }
 .radio-container {
   display: block;
@@ -240,4 +259,14 @@ button {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+/* TODO mobile design */
+@media screen and (max-width: 376px) {
+  body {
+    padding: 2rem;
+  }
+  .name,
+  .query {
+    flex-direction: column;
+  }
 }

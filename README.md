@@ -39,10 +39,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+https://www.frontendmentor.io/solutions/contact-form-RnWQQtdNUZ
 
-## My process
+- Solution URL: [frontendmentor solution](https://www.frontendmentor.io/solutions/contact-form-RnWQQtdNUZ)
+- Live Site URL: [github pages](https://coder-abdo.github.io/frontend-mentor-contact-form/)
 
 ### Built with
 
@@ -53,31 +53,71 @@ Users should be able to:
 ### What I learned
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<span class="message-error" role="alert"></span>
+<span
+  class="terms-checkmark"
+  role="checkbox"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="terms check"
+></span>
+<span
+  class="checkmark"
+  role="radio"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="Support Request"
+  data-value="Support Request"
+></span>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.terms input:checked ~ .terms-checkmark {
+  background-color: var(--med-green);
+}
+
+/* Checkmark indicator */
+.terms-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.terms input:checked ~ .terms-checkmark:after {
+  display: block;
+}
+
+.terms .terms-checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 ```
 
 ### Continued development
 
+1. Accessibility.
+2. HTML5 Semantic.
+
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role) - This helped me for learn more about how to add an accessibility to span as a radio input. I really liked this pattern and will use it going forward.
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) - This is an amazing article which helped me learn more about how to add an accessibility to span as a checkbox input. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
 - Website - [Abdulmonaem](https://abdelmonaem-portfolio.vercel.app/)
 - Frontend Mentor - [@coder-abdo](https://www.frontendmentor.io/profile/coder-abdo)
-
-## Acknowledgments

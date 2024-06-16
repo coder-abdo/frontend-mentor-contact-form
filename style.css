@@ -29,7 +29,49 @@ body {
   background: var(--light-green);
   padding: 2rem 0;
 }
-
+.success-message {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding: 1rem 2rem;
+  background-color: var(--dark-grey);
+  border-radius: 0.5rem;
+  gap: 2rem;
+  margin: 0 auto;
+  transition: opacity 0.3s;
+}
+.success-message.show {
+  opacity: 1;
+  visibility: visible;
+}
+.message-title {
+  display: flex;
+  font-size: 1.8rem;
+  gap: 1rem;
+}
+.message-icon {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--base-size);
+  color: var(--med-grey);
+  border-radius: 50%;
+  border: 1px solid var(--med-grey);
+  width: 2rem;
+  height: 2rem;
+}
+.message-title-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+.message-body {
+  font-size: var(--base-size);
+  color: var(--med-grey);
+}
 #contact-form {
   margin: 0 auto;
   padding: 2rem;
@@ -85,7 +127,14 @@ textarea:focus {
   border-color: var(--med-green);
   cursor: pointer;
 }
-
+input.error,
+textarea.error {
+  border-color: var(--red);
+}
+input.error:focus,
+textarea.error:focus {
+  border-color: var(--red);
+}
 .query-container {
   display: flex;
   flex-direction: column;
@@ -116,6 +165,9 @@ textarea:focus {
   outline: none;
   border-color: var(--med-green);
   background-color: var(--light-green);
+}
+.controller-check.error {
+  border-color: var(--red);
 }
 .radio-container {
   display: block;
@@ -251,7 +303,16 @@ button {
   border: 0;
   cursor: pointer;
 }
-
+/* error message style */
+.firstName-error,
+.lastName-error,
+.email-error,
+.terms-error,
+.message-error,
+.query-error {
+  font-size: 1.2rem;
+  color: var(--red);
+}
 /* attribution */
 .attribution {
   font-size: 11px;
